@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+    <h2>Halaman Login</h2>
+
+    <form onsubmit="login(event)">
+
+        <label>Username:</label><br>
+        <input type="text" id="username" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password" required><br><br>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <p id="pesan"></p>
+
+    <a href="index.html">Kembali ke Beranda</a>
+
+    <script>
+        function login(event) {
+            event.preventDefault();
+
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if (user == "salwa" && pass == "12345") {
+                window.location.href = "halaman1.html";
+            }
+            else if (user == "arraa" && pass == "12345") {
+                window.location.href = "halaman2.html";
+            }
+            else if (user == "user3" && pass == "12345") {
+                window.location.href = "halaman3.html";
+            }
+            else {
+                document.getElementById("pesan").innerHTML =
+                "Username atau password salah!";
+            }
+        }
+    </script>
+
+</body>
+</html>
